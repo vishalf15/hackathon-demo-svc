@@ -2,13 +2,14 @@ package com.s4s.charity.voteregistrationsvc.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;
 
 @Controller
+@RequestMapping("/")
 @Slf4j
 public class DemoController {
 
@@ -16,13 +17,14 @@ public class DemoController {
     public String sayHello() {
 
         log.info("within DemoController.sayHello");
-        String msg = "Hello " + UUID.randomUUID().toString() + "!!! How are you??";
+        String msg = "Hello " + UUID.randomUUID() + "!!! How are you?? I am from registration-svc";
         log.info("msg :: ", msg);
         return msg;
     }
 
     @RequestMapping("/index")
-    public String index() {
+    public String loadIndexPage() {
+        log.info("within loadIndexPage...");
         return "index.html";
     }
 }

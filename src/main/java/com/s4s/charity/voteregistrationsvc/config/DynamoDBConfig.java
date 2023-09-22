@@ -1,5 +1,9 @@
 package com.s4s.charity.voteregistrationsvc.config;
 
+import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,13 +13,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 
-import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.BasicAWSCredentials;
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
-
-/*@Configuration
-@EnableDynamoDBRepositories(basePackages = "com.s4s.charity.voteregistrationsvc.repositories")*/
+@Configuration
+@EnableDynamoDBRepositories(basePackages = "com.s4s.charity.voteregistrationsvc.repositories")
 public class DynamoDBConfig {
 
     @Value("${amazon.dynamodb.endpoint}")
@@ -29,7 +28,8 @@ public class DynamoDBConfig {
     
     @Autowired
     private ApplicationContext context;
-
+    
+    
     @Bean
     public AmazonDynamoDB amazonDynamoDB() {
         AmazonDynamoDB amazonDynamoDB = new AmazonDynamoDBClient(amazonAWSCredentials());
