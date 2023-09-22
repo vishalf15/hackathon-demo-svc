@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.s4s.charity.vote-registration-svc' is invalid and this project uses 'com.s4s.charity.voteregistrationsvc' instead.
+* The original package name 'com.s4s.charity.demo-svc' is invalid and this project uses 'com.s4s.charity.voteregistrationsvc' instead.
 
 # Getting Started
 

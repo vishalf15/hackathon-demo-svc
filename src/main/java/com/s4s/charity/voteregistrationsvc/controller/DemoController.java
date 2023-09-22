@@ -12,6 +12,7 @@ public class DemoController {
 
     @GetMapping("/sayHello")
     public String sayHello() {
+
         log.info("within DemoController.sayHello");
         String msg = "Hello " + UUID.randomUUID().toString() + "!!! How are you??";
         log.info("msg :: ", msg);
