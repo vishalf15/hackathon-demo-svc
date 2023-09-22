@@ -11,7 +11,6 @@
     <groupId>com.s4s.charity</groupId>
     <artifactId>demo-svc</artifactId>
     <version>1.0.0</version>
-    <name>vote-reg-svc</name>
     <description>PA youth Voters Registration service</description>
     <properties>
         <java.version>11</java.version>
