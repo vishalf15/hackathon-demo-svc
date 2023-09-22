@@ -187,10 +187,8 @@
                 <version>${maven-dependency-plugin.version}</version>
                 <executions>
                     <execution>
-                        <id>copy-dependencies</id>
-                        <phase>test-compile</phase>
                         <goals>
-                            <goal>copy-dependencies</goal>
+                            <goal>java</goal>
                         </goals>
 			    <configuration>
 					<excludes>
